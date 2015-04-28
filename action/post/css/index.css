@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+.xheditor{
+	width	: 80%;
+	height	: 350px;	
+}
+.title{
+	width	: 100px;
+	display	: inline-block;
+}
+.btn-li{
+	text-align:center;
+	padding:10px;
+}

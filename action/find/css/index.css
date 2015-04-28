@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+.image-logo{
+	float		: left;
+	width		: 200px;
+	height		: 150px;
+	text-align	: center;
+	overflow	: hidden;	
+}
+
+.department-row{
+	border-bottom	: 1px solid #EBEBEB;
+	margin			: 5px;	
+}
+
+.pager{
+	text-align		: center;
+	
+}

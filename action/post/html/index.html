@@ -1,0 +1,36 @@
+<div class="center ">
+	<form name="edit_form" action="/post/action" method="post" enctype="multipart/form-data">
+		<ul>
+			<li>
+				<span class="title"><label for="department_name">公司名:</label></span>
+				<span><input type="text" name="department_name" id="department_name" value="" maxlength="45" /></span>
+			</li>
+			<li>
+				<span class="title"><label for="department_tel">公司电话:</label></span>
+				<span><input type="text" name="department_tel" value="" maxlength="100" /></span>
+				<span>如果有多个电话，请使用","号分隔。</span>
+			</li>
+			<li>
+				<span class="title"><label for="department_logo">公司LOGO:</label></span>
+				<span><input type="file" name="department_logo" /></span>
+			</li>
+			<li>
+				<span class="title"><label for="department_base_url">公司网站:</label></span>
+				<span><input type="text" name="department_base_url" value="" maxlength="100" /></span>
+			</li>
+			<li>
+				<span class="title"><label for="department_address">公司地址:</label></span>
+				<span><input type="text" name="department_address" value="" maxlength="200" /></span>
+			</li>
+			<li>
+				<span class="title"><label for="department_description_content">公司介绍:</label></span>
+				<span><textarea name="department_description_content" class="xheditor" maxlength="65535"></textarea></span>
+			</li>
+			<li class="btn-li">
+				<input type="submit" value="提交">
+			</li>
+		</ul>
+	</form>
+</div>
+<script type="text/javascript" src="/layout/js/xheditor/xheditor-1.1.14-zh-cn.min.js"></script>
+

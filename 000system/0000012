@@ -1,0 +1,8 @@
+select min(n)
+from
+(	select 5 as n -- get case value
+union
+ 	select 3 as n -- get case value
+union
+	select 5 as n -- get case value
+) as tmp;

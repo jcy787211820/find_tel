@@ -1,0 +1,34 @@
+<?php FOREACH( $department_lists AS $key => $department_list): ?>
+	<div class="department-row">
+		<div class="image-logo">
+			<img src="<?=image_format($department_list['department_image_url'])?>" alt="<?=$department_list['department_name']?> LOGO" />
+		</div>
+		<div>
+			<ul>
+				<li>公司名称: <span class="department_name"><?=$department_list['department_name']?></span></li>
+				<li>公司地址: <span class="department_address"><?=$department_list['department_address']?></span></li>
+				<li>
+					公司网站:
+					<a href="<?=$department_list['department_base_url']?>" target="_blank" title="<?=$department_list['department_name']?>">
+						<?=$department_list['department_base_url']?>
+					</a>
+				</li>
+				<li>
+					公司电话:
+					<?php FOREACH($department_list['department_tels'] AS $department_tel):?>
+						<?=$department_tel['department_tel_description']?>
+						<?=$department_tel['department_tel_number']?>
+					<?php ENDFOREACH;?>					
+				</li>
+			</ul>
+		</div>
+		<div class="description">
+			<?=$department_list['department_description_content']?>
+		</div>
+		<div class="clear"></div>
+	</div>
+<?php ENDFOREACH; ?>
+<?php new Pager(array(
+	'current_page'	=> init_get('page', 1),
+	'mode'			=> 'simple'
+)); ?>

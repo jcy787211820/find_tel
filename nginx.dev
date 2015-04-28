@@ -1,0 +1,116 @@
+server {
+    listen       80; 
+    server_name  www.findtel.dev;
+    index        index.php;
+    root         /www/find_tel;
+
+    location / { 
+        index index.php;
+        if (!-f $request_filename) {
+            rewrite ^(.*) /index.php?$1 last;
+        } 
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME /www/find_tel$fastcgi_script_name;
+        include        fastcgi_params;
+    }   
+
+    location ~ \.(gif|jpg|jpeg|png|swf|bmp)$ {
+        expires        2d; 
+    }   
+
+    location ~ \.(css|js)$ {
+        expires        1d; 
+    }   
+}
+
+server {
+    listen       80; 
+    server_name  image.99phone.cn;
+    index        index.php;
+    root         /www/99phone_image;
+
+    location / { 
+        index index.php;
+        if (!-f $request_filename) {
+            rewrite ^(.*) /index.php?$1 last;
+        } 
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME /www/99phone_image$fastcgi_script_name;
+        include        fastcgi_params;
+    }   
+
+    location ~ \.(gif|jpg|jpeg|png|swf|bmp)$ {
+        expires        2d; 
+    }   
+
+    location ~ \.(css|js)$ {
+        expires        1d; 
+    }   
+}
+
+server {
+    listen       80; 
+    server_name  www.shangbaidu.cn;
+    index        index.php;
+    root         /www/find_tel;
+
+    location / { 
+        index index.php;
+        if (!-f $request_filename) {
+            rewrite ^(.*) /index.php?$1 last;
+        } 
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME /www/find_tel$fastcgi_script_name;
+        include        fastcgi_params;
+    }   
+
+    location ~ \.(gif|jpg|jpeg|png|swf|bmp)$ {
+        expires        2d; 
+    }   
+
+    location ~ \.(css|js)$ {
+        expires        1d; 
+    }   
+}
+
+
+server {
+    listen       80; 
+    server_name  *.shangbaidu.cn;
+    index        index.php;
+    root         /www/find_tel;
+
+    location / { 
+        index index.php;
+        if (!-f $request_filename) {
+            rewrite ^(.*) /index.php?$1 last;
+        } 
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME /www/find_tel$fastcgi_script_name;
+        include        fastcgi_params;
+    }   
+
+    location ~ \.(gif|jpg|jpeg|png|swf|bmp)$ {
+        expires        2d; 
+    }   
+
+    location ~ \.(css|js)$ {
+        expires        1d; 
+    }   
+}
